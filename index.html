@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite - Classic Margherita Pizza</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Classic Margherita Pizza</h1>
+            <div class="recipe-meta">
+                <span class="cooking-time"><i class="fas fa-clock"></i> 1 hour 30 mins</span>
+                <span class="difficulty"><i class="fas fa-signal"></i> Medium</span>
+                <span class="servings"><i class="fas fa-users"></i> 4 servings</span>
+            </div>
+            <div class="recipe-image">
+                <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                     alt="Classic Margherita Pizza" 
+                     loading="lazy">
+                <div class="image-overlay">
+                    <button class="zoom-btn"><i class="fas fa-search-plus"></i></button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="recipe-content">
+                <section class="ingredients">
+                    <h2><i class="fas fa-list"></i> Ingredients</h2>
+                    <div class="ingredients-list">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="ing1">
+                                <label for="ing1">2 cups all-purpose flour</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ing2">
+                                <label for="ing2">1 cup warm water</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ing3">
+                                <label for="ing3">2 1/4 tsp active dry yeast</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ing4">
+                                <label for="ing4">1 tsp sugar</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ing5">
+                                <label for="ing5">1 tsp salt</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ing6">
+                                <label for="ing6">2 tbsp olive oil</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ing7">
+                                <label for="ing7">1 cup tomato sauce</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ing8">
+                                <label for="ing8">8 oz fresh mozzarella</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ing9">
+                                <label for="ing9">Fresh basil leaves</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ing10">
+                                <label for="ing10">Salt and pepper to taste</label>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="instructions">
+                    <h2><i class="fas fa-tasks"></i> Instructions</h2>
+                    <div class="instructions-list">
+                        <ol>
+                            <li>
+                                <div class="step-content">
+                                    <span class="step-number">1</span>
+                                    <p>Mix warm water, yeast, and sugar. Let stand for 5 minutes until foamy.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-content">
+                                    <span class="step-number">2</span>
+                                    <p>Combine flour and salt in a large bowl. Add yeast mixture and olive oil.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-content">
+                                    <span class="step-number">3</span>
+                                    <p>Knead dough for 10 minutes until smooth and elastic.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-content">
+                                    <span class="step-number">4</span>
+                                    <p>Place in oiled bowl, cover, and let rise for 1 hour.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-content">
+                                    <span class="step-number">5</span>
+                                    <p>Preheat oven to 450°F (230°C) with pizza stone if available.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-content">
+                                    <span class="step-number">6</span>
+                                    <p>Roll out dough and transfer to baking sheet.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-content">
+                                    <span class="step-number">7</span>
+                                    <p>Spread tomato sauce, add sliced mozzarella.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-content">
+                                    <span class="step-number">8</span>
+                                    <p>Bake for 12-15 minutes until crust is golden.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-content">
+                                    <span class="step-number">9</span>
+                                    <p>Top with fresh basil leaves and serve hot.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+            </div>
+
+            <div class="recipe-actions">
+                <button id="saveRecipe" class="btn"><i class="fas fa-bookmark"></i> Save Recipe</button>
+                <button id="printRecipe" class="btn"><i class="fas fa-print"></i> Print Recipe</button>
+                <button id="shareRecipe" class="btn"><i class="fas fa-share-alt"></i> Share</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for image zoom -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
